@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """returning a tuple"""
 from typing import Tuple, Union
