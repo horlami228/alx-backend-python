@@ -50,15 +50,18 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
+    """unittest for memoize method"""
     def test_memoize(self):
+        """test memoize method"""
         class TestClass:
+            """inner class for testing memoize method"""
             def a_method(self):
-                print("a_method called")
+                """a method"""
                 return 42
 
             @utils.memoize
             def a_property(self):
-                print("a_property called")
+                """a property"""
                 return self.a_method()
 
         # Create an instance of TestClass
@@ -74,7 +77,5 @@ class TestMemoize(unittest.TestCase):
             mock_object.assert_called_once()
 
 
-if __name__ == "__main__":
-    unittest.main()
 if __name__ == "__main__":
     unittest.main()
