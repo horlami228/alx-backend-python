@@ -21,9 +21,11 @@ class TestGithubOrgClient(unittest.TestCase):
         url = f"https://api.github.com/orgs/{org_name}"
         expected_result = {"name": org_name, "payload": True}
 
+        mock_object.return_value = expected_result
+
         client = GithubOrgClient(org_name)
 
-        client.org()
+        result = client.org
 
         mock_object.assert_called_once_with(url)
 
