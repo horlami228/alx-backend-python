@@ -8,12 +8,11 @@ from parameterized import parameterized
 
 
 class TestGithubOrgClient(unittest.TestCase):
-    """
-    TestGithubOrgClient class
-    """
+    """ Class for Testing Github Org Client """
+
     @parameterized.expand([
-        ("google",),
-        ("abc",),
+        ('google'),
+        ('abc')
     ])
     @unittest.mock.patch('client.get_json')
     def test_org(self, input, mock):
